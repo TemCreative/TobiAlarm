@@ -26,3 +26,37 @@ get.style.display="none"
          snd.play();
       }
  }
+ function resetTime(){
+    hr.value = "";
+    mn.value = "";
+    sc.value = "";
+    snd.pause();
+}
+
+function stopTime(){
+    var myRndNum= Math.floor(Math.random()*10);
+    var myRandNum= Math.floor(Math.random()*10);
+    var sign = [ '+', '-', '/', '*'];
+    var myRndSign= Math.floor(Math.random()*3);
+    console.log(myRndSign);
+    myanswr.style.display="block";
+    myqstn.innerHTML=  myRndNum +  sign[myRndSign]  + myRandNum;
+    get.style.display= "block"
+        
+    }
+function submitAns(){
+    var output= eval(myqstn.innerHTML);
+    var mainOutput= Math.round(output);
+    console.log(mainOutput)
+    setTimeout(function(){
+        if(myanswr.value==mainOutput){
+            snd.pause();
+        }
+        else(
+            snd.play
+        )
+    }
+    ,5000)
+
+
+}
