@@ -10,7 +10,7 @@ get.style.display="none"
          
      
      if (hr.value == myHour && mn.value == myMinutes && sc.value == mySeconds) {
-         // alert("Hi")
+        
          snd.play()
       }
     
@@ -22,7 +22,7 @@ get.style.display="none"
      var myMinutes= myDate.getMinutes();
      var mySeconds= myDate.getSeconds();
      if (hr.value == myHour && mn.value == myMinutes && sc.value == mySeconds) {
-         // alert("Hi")
+       
          snd.play();
       }
  }
