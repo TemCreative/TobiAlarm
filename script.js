@@ -69,7 +69,7 @@ for (let i = 12; i>0; i--) {
 
 }
 for (let i = 59; i>0; i--) {
-    let mySeconds = i < 59 ? "0" + i : i;
+    let myMin = i < 59 ? "0" + i : i;
     let option = `<option value="${i}"> ${i}</option>`;
     selectMenu [0].firstElementsChild.insertAdjacentHTML("afterend", option);
 
