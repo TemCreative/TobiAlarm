@@ -11,7 +11,7 @@
 </head>
 <style>
     body{
-        background-image: url(/images/9d2b6a6f9b9da2b13182f33cf25bb511.jpg);
+        background-image: url(/images/photo-1550684848-86a5d8727436.avif);
         background-size: fixed;
         background-repeat: no-repeat;
         background-size: cover;
@@ -25,17 +25,21 @@
         <div>
             <div class="colunm d-flex justify-content-center gap-4">
                 <select id="myHour" >
-                    <option value="Hrs" >Hours</option>
-                    <option value="01">01</option>
+                    <!-- <option value="Hrs"  >Hours</option> -->
+                    <input type="text"  name="hour" placeholder="Enter hours"
+                    min="0"
+                    max="12"
+                    required>
+                    <!-- <option value="01">01</option>
                     <option value="02">02</option>
-                    <option value="03">03</option>
+                    <option value="03">03</option> -->
                 </select>
                 <div class="colunm">
                     <select id="myMin" >
                         <option value="Minutes" selected hidden >Minutes</option>
-                        <option value="01">01</option>
+                        <!-- <option value="01">01</option>
                         <option value="02">02</option>
-                        <option value="03">03</option>
+                        <option value="03">03</option> -->
     
                     </select>
                 </div>

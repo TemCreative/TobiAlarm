@@ -60,7 +60,10 @@
 
 
 // }
-const selectMenu = document.getSelectorAll("select")
+// const selectMenu = document.getSelectorAll("select")
+let myHour = 12
+let mySeconds = 59
+
 
 for (let i = 12; i>0; i--) {
     let myHour = i< 12 ? "0" + i : i;
