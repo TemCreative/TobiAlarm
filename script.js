@@ -11,7 +11,7 @@ get.style.display="none"
      
      if (hr.value == myHour && mn.value == myMinutes && sc.value == mySeconds) {
         
-         ply.play()
+         Snd.play()
       }
     
  }
@@ -23,7 +23,7 @@ get.style.display="none"
      var mySeconds= myDate.getSeconds();
      if (hr.value == myHour && mn.value == myMinutes && sc.value == mySeconds) {
     //    alert("Hi")
-         ply.play();
+         Snd.play();
       }
  }
  function resetTime(){
@@ -50,10 +50,10 @@ function submitAns(){
     console.log(mainOutput)
     setTimeout(function(){
         if(myanswr.value==mainOutput){
-            ply.pause();
+            Snd.pause();
         }
         else(
-            ply.play
+            Snd.play
         )
     }
     ,5000)
