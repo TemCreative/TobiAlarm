@@ -1,5 +1,6 @@
 myanswr.style.display= "none"
 get.style.display="none"
+var alarmSong = new song('')
  function shwcrntTime(){
      var myDate= new Date();
      var myHour= myDate.getHours(); 
@@ -30,7 +31,7 @@ get.style.display="none"
     hr.value = "";
     mn.value = "";
     sc.value = "";
-    ply.pause();
+    Snd.pause();
 }
 
 function stopTime(){
