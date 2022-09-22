@@ -1,6 +1,10 @@
 myanswr.style.display= "none"
 get.style.display="none"
-var alarmSong = new song('')
+var myDate= new Date();
+var myHour= myDate.getHours(); 
+var myMinutes= myDate.getMinutes();
+var mySeconds= myDate.getSeconds();
+// var alarmSong = new song('')
  function shwcrntTime(){
      var myDate= new Date();
      var myHour= myDate.getHours(); 
@@ -10,22 +14,16 @@ var alarmSong = new song('')
      gettym.innerHTML= myHour + ":" + myMinutes + " : " + mySeconds + " : " + ap;
          
      
-     if (hr.value == myHour && mn.value == myMinutes && sc.value == mySeconds) {
+    //  if (hr.value == myHour && mn.value == myMinutes && sc.value == mySeconds) {
         
-         Snd.play()
-      }
+    //      Snd.play()
+    //   }
+    
     
  }
- var curntTime = setInterval(shwcrntTime,1000);
+ 
  function alarmSet(){
-     var myDate= new Date();
-     var myHour= myDate.getHours(); 
-     var myMinutes= myDate.getMinutes();
-     var mySeconds= myDate.getSeconds();
-     if (hr.value == myHour && mn.value == myMinutes && sc.value == mySeconds) {
-    //    alert("Hi")
-         Snd.play();
-      }
+    setInterval(checkAlarm, 1000)  
  }
  function resetTime(){
     hr.value = "";
@@ -35,6 +33,9 @@ var alarmSong = new song('')
 }
 
 function stopTime(){
+    if((hr.value == 0)|| (mn.value == 0)|| (sc.value == 0)){
+        console.log("Fields cannot be empty")
+    }else{
     var myRndNum= Math.floor(Math.random()*10);
     var myRandNum= Math.floor(Math.random()*10);
     var sign = [ '+', '-', '/', '*'];
@@ -43,8 +44,12 @@ function stopTime(){
     myanswr.style.display="block";
     myqstn.innerHTML=  myRndNum +  sign[myRndSign]  + myRandNum;
     get.style.display= "block"
-        
+    clearInterval(checkAlarm)
     }
+
+    
+        
+}
 function submitAns(){
     var output= eval(myqstn.innerHTML);
     var mainOutput= Math.round(output);
@@ -85,3 +90,11 @@ function submitAns(){
 //     selectMenu [0].firstElementsChild.insertAdjacentHTML("afterend", option);
 
 // }
+setInterval(shwcrntTime,1000);
+
+const checkAlarm = ()=>{
+    if (hr.value == myHour && mn.value == myMinutes && sc.value == mySeconds) {
+        //    alert("Hi")
+             Snd.play();
+    }else{console.log("Wrong time")}
+}
